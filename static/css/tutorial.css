@@ -102,12 +102,12 @@ h2 {
   padding: 20px;
   border-radius: 15px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease-in-out, box-shadow 0.3s ease;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.02);
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
 }
 
@@ -220,6 +220,7 @@ iframe {
   font-weight: bold;
   display: block;
   transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
 }
 
 .categories-menu ul li a:hover {
@@ -331,6 +332,11 @@ iframe {
 
   .dropdown.active .dropdown-menu,
   .sub-dropdown.active .sub-dropdown-menu {
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .sub-dropdown:hover .sub-dropdown-menu {
     display: block;
   }
 }

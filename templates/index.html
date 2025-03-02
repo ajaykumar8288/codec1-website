@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodecOne1</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <!-- <div class="loader"></div> -->
+
+    {% include "component/header.html" %}
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🚀 Welcome to <span>CodecOne1</span></h1>
+            <p>Master coding with tutorials, guides & latest trends!</p>
+            <a href="/blog" class="btn">Explore Blogs</a>
+        </div>
+    </section>
+
+
+    <!-- FEATURED POSTS -->
+    <section class="featured">
+        <h2>Featured Posts</h2>
+        <div class="blog-container">
+            {% for blog in featured_blogs %}
+            <div class="blog-card">
+                <!-- <img src="{{ blog.image_url }}" alt="Blog Image"> -->
+                <div class="blog-content">
+                    <h3>{{ blog.title }}</h3>
+                    <p>{{ blog.content[:150] | safe }}...</p>
+                    <a href="{{ blog.url }}" class="read-more">Read More</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- LATEST BLOGS -->
+    <section class="latest">
+        <h2>Latest Blogs</h2>
+        <div class="blog-container">
+            {% for blog in latest_blogs %}
+            <div class="blog-card">
+                <!-- <img src="{{ blog.image_url }}" alt="Blog Image"> -->
+                <div class="blog-content">
+                    <h3>{{ blog.title }}</h3>
+                    <p>{{ blog.content[:150] | safe }}...</p>
+                    <a href="{{ blog.url }}" class="read-more">Read More</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% include "component/newsletter.html" %}
+    {% include "component/footer.html" %}
+
+    <!-- JavaScript Files -->
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

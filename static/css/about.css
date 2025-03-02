@@ -1,0 +1,122 @@
+/* Root Variables */
+:root {
+  /* Light Mode */
+  --bg-color: #f5f5f5;
+  --text-color: #121212;
+  --card-bg: rgba(255, 255, 255, 0.2);
+  --button-gradient: linear-gradient(45deg, #ff6600, #ffcc00);
+  --icon-color: #ff6600;
+  --border-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: rgba(0, 0, 0, 0.3);
+  --button-gradient: linear-gradient(45deg, #ffcc00, #ff6600);
+  --icon-color: #ffcc00;
+  --border-shadow: rgba(255, 255, 255, 0.1);
+}
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* About Container */
+.about-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* About Section */
+.about h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  color: var(--icon-color);
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Team Section */
+.team {
+  margin-top: 40px;
+}
+
+.team h2 {
+  font-size: 2rem;
+  color: var(--icon-color);
+  margin-bottom: 20px;
+}
+
+/* Team Cards */
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.team-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 8px 32px var(--border-shadow);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Team Image */
+.team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid var(--text-color);
+}
+
+/* Team Member Info */
+.team-card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.team-card p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    width: 90%;
+  }
+
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

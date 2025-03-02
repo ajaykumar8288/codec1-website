@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - CodecOne1</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+</head>
+
+<body>
+  {% include "component/header.html" %}
+
+  <main class="about-container">
+    <!-- About Section -->
+    <section class="about">
+      <h1>About This Blog</h1>
+      <h2>Who We Are</h2>
+      <p>Welcome to <strong>CodecOne1</strong> – a place where developers explore, learn, and grow together. 🚀</p>
+      <p>We share high-quality programming tutorials, coding tips, and the latest trends in the tech industry. Whether
+        you're a beginner or an experienced developer, there's something here for you. 😃</p>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+      <h2>Meet Our Team</h2>
+      <div class="team-container">
+        <div class="team-card">
+          <img src="{{ url_for('static', filename='team/member1.jpg') }}" alt="John Doe">
+          <h3>John Doe</h3>
+          <p>Founder & Developer</p>
+        </div>
+        <div class="team-card">
+          <img src="{{ url_for('static', filename='team/member2.jpg') }}" alt="Jane Smith">
+          <h3>Jane Smith</h3>
+          <p>Content Creator</p>
+        </div>
+      </div>
+      <p>This blog shares tutorials and coding tips for Flask developers.</p>
+    </section>
+  </main>
+
+  {% include "component/footer.html" %}
+
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

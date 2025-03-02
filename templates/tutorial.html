@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials - CodecOne1</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tutorial.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- JavaScript Files -->
+    <script defer src="{{ url_for('static', filename='js/tutorials.js') }}"></script>
+</head>
+
+<body>
+    {% include "component/header.html" %}
+
+    <main>
+        <!-- Categories Dropdown Menu -->
+        <nav class="categories-menu">
+            <ul>
+                <!-- Data Structures & Algorithms -->
+                <li class="dropdown">
+                    <a href="#">Data Structures & Algorithms ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sorting Algorithms</a></li>
+                        <li><a href="#">Searching Algorithms</a></li>
+                        <li><a href="#">Recursion & Backtracking</a></li>
+                        <li class="sub-dropdown">
+                            <a href="#">Linked Lists ▶</a>
+                            <ul class="sub-dropdown-menu">
+                                <li><a href="#">Singly Linked List</a></li>
+                                <li><a href="#">Doubly Linked List</a></li>
+                                <li><a href="#">Circular Linked List</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Stacks & Queues</a></li>
+                        <li><a href="#">Trees & Graphs</a></li>
+                    </ul>
+                </li>
+
+                <!-- ML & Data Science -->
+                <li class="dropdown">
+                    <a href="#">ML & Data Science ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Machine Learning Basics</a></li>
+                        <li><a href="#">Deep Learning & Neural Networks</a></li>
+                        <li><a href="#">NLP & Data Preprocessing</a></li>
+                        <li><a href="#">Data Visualization</a></li>
+                    </ul>
+                </li>
+
+                <!-- Interview Corner -->
+                <li class="dropdown">
+                    <a href="#">Interview Corner ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Coding Problems</a></li>
+                        <li><a href="#">DSA Interview Questions</a></li>
+                        <li><a href="#">System Design Questions</a></li>
+                        <li><a href="#">Company-Wise Experiences</a></li>
+                    </ul>
+                </li>
+
+                <!-- Programming Languages -->
+                <li class="dropdown">
+                    <a href="#">Programming Languages ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">C++</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Go</a></li>
+                        <li><a href="#">Rust</a></li>
+                    </ul>
+                </li>
+
+                <!-- Web Development -->
+                <li class="dropdown">
+                    <a href="#">Web Development ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Frontend (HTML, CSS, JS)</a></li>
+                        <li><a href="#">Backend (Node.js, Flask, Django)</a></li>
+                        <li><a href="#">Full Stack Development</a></li>
+                        <li><a href="#">Databases (SQL, MongoDB, Firebase)</a></li>
+                    </ul>
+                </li>
+
+                <!-- GATE -->
+                <li class="dropdown">
+                    <a href="#">GATE Preparation ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Exam Pattern</a></li>
+                        <li><a href="#">Previous Year Papers</a></li>
+                        <li><a href="#">Mock Tests</a></li>
+                    </ul>
+                </li>
+
+                <!-- CS Subjects -->
+                <li class="dropdown">
+                    <a href="#">CS Subjects ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Operating Systems</a></li>
+                        <li><a href="#">DBMS</a></li>
+                        <li><a href="#">Computer Networks</a></li>
+                        <li><a href="#">Software Engineering</a></li>
+                    </ul>
+                </li>
+
+                <!-- DevOps & Linux -->
+                <li class="dropdown">
+                    <a href="#">DevOps & Linux ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Linux Basics</a></li>
+                        <li><a href="#">CI/CD & Docker</a></li>
+                        <li><a href="#">Cloud Computing</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- Video Tutorials Section -->
+        <section class="tutorials">
+            <h2>Video Tutorials</h2>
+            <div class="tutorial-cards">
+                <div class="card" id="ai">
+                    <h3>Introduction to AI</h3>
+                    <iframe width="100%" height="215" src="https://www.youtube.com/embed/your-video-id" frameborder="0"
+                        allowfullscreen></iframe>
+                    <p>Learn the basics of Artificial Intelligence.</p>
+                    <div class="tags">
+                        <span>#AI</span>
+                        <span>#MachineLearning</span>
+                    </div>
+                    <div class="actions">
+                        <input type="checkbox" class="progress-checkbox"> Completed
+                        <a href="tutorial_detail.html?topic=ai" class="read-more">Read More</a>
+                        <button class="share-btn" onclick="shareTutorial('AI')">📤 Share</button>
+                    </div>
+                </div>
+
+                <div class="card" id="webdev">
+                    <h3>HTML & CSS Tutorial</h3>
+                    <iframe width="100%" height="215" src="https://www.youtube.com/embed/your-video-id" frameborder="0"
+                        allowfullscreen></iframe>
+                    <p>Build responsive web pages with HTML and CSS.</p>
+                    <div class="tags">
+                        <span>#WebDev</span>
+                        <span>#HTML</span>
+                        <span>#CSS</span>
+                    </div>
+                    <div class="actions">
+                        <input type="checkbox" class="progress-checkbox"> Completed
+                        <a href="tutorial_detail.html?topic=webdev" class="read-more">Read More</a>
+                        <button class="share-btn" onclick="shareTutorial('WebDev')">📤 Share</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="webdev">
+                <h3>HTML & CSS Tutorial</h3>
+                <iframe width="100%" height="215" src="https://www.youtube.com/embed/your-video-id" frameborder="0"
+                    allowfullscreen></iframe>
+                <p>Build responsive web pages with HTML and CSS.</p>
+                <div class="tags">
+                    <span>#WebDev</span>
+                    <span>#HTML</span>
+                    <span>#CSS</span>
+                </div>
+                <div class="actions">
+                    <input type="checkbox" class="progress-checkbox"> Completed
+                    <a href="tutorial_detail.html?topic=webdev" class="read-more">Read More</a>
+                    <button class="share-btn" onclick="shareTutorial('WebDev')">📤 Share</button>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    {% include "component/footer.html" %}
+</body>
+
+</html>

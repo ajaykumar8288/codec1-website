@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Flask Blog</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+</head>
+
+<body>
+  <div class="loader"></div>
+
+  {% include "component/header.html" %}
+
+  <h1>Blog Posts</h1>
+  <p>Here you'll find blog posts on various coding topics.</p>
+
+  <div class="blog-container">
+    {% for blog in blogs %}
+    <div class="blog-card">
+      <h2>{{ blog.title }}</h2>
+      <p>{{ blog.content[:150]|safe }}...</p>
+      <a href="{{ blog.url }}">Read More</a>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% include "component/footer.html" %}
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

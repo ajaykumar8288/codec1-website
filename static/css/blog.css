@@ -1,0 +1,153 @@
+/* Root Theme Variables */
+:root {
+  /* Light Mode */
+  --background-light: #f4f4f4;
+  --text-light: #333;
+  --card-background-light: #fff;
+  --card-shadow-light: rgba(0, 0, 0, 0.1);
+  --button-light: #007bff;
+  --button-hover-light: #0056b3;
+
+  /* Dark Mode */
+  --background-dark: #121212;
+  --text-dark: #ffffff;
+  --card-background-dark: #1e1e1e;
+  --card-shadow-dark: rgba(255, 255, 255, 0.1);
+  --button-dark: #ffcc00;
+  --button-hover-dark: #ff9900;
+}
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Loader */
+.loader {
+  display: none;
+}
+
+/* Blog Container */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Responsive Grid */
+  gap: 20px;
+  padding: 40px 5%;
+}
+
+/* Blog Cards */
+.blog-card {
+  background: var(--card-background-light);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px var(--card-shadow-light);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+body.dark-mode .blog-card {
+  background: var(--card-background-dark);
+  box-shadow: 0px 4px 10px var(--card-shadow-dark);
+}
+
+/* Blog Card Text */
+.blog-card h2 {
+  font-size: 22px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+body.dark-mode .blog-card h2 {
+  color: var(--text-dark);
+}
+
+.blog-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+body.dark-mode .blog-card p {
+  color: #ccc;
+}
+
+/* Blog Card Buttons */
+.blog-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  background: var(--button-light);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+}
+
+body.dark-mode .blog-card a {
+  background: var(--button-dark);
+}
+
+.blog-card a:hover {
+  background: var(--button-hover-light);
+}
+
+body.dark-mode .blog-card a:hover {
+  background: var(--button-hover-dark);
+}
+
+/* Hover Effect */
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .blog-card:hover {
+  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Blog Header */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 20px;
+  color: var(--text-light);
+}
+
+body.dark-mode h1 {
+  color: var(--text-dark);
+}
+
+/* Blog Description */
+p {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+body.dark-mode p {
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-container {
+    padding: 20px 10px;
+  }
+
+  .blog-card {
+    padding: 15px;
+  }
+}

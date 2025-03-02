@@ -1,0 +1,100 @@
+/* Newsletter Section */
+.newsletter {
+  text-align: center;
+  background: var(--card-background-light);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 50%;
+  box-shadow: 0px 5px 15px var(--card-shadow-light);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+body.dark-mode .newsletter {
+  background: var(--card-background-dark);
+  box-shadow: 0px 5px 15px var(--card-shadow-dark);
+}
+
+/* Newsletter Heading */
+.newsletter h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--text-light);
+  transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .newsletter h2 {
+  color: var(--text-dark);
+}
+
+/* Input Field */
+.newsletter input {
+  padding: 12px;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body.dark-mode .newsletter input {
+  background: var(--background-dark);
+  color: var(--text-dark);
+  border: 1px solid #555;
+}
+
+/* Subscribe Button */
+.newsletter button {
+  padding: 12px 20px;
+  border: none;
+  background: var(--button-light);
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+body.dark-mode .newsletter button {
+  background: var(--button-dark);
+  color: black;
+}
+
+.newsletter button:hover {
+  background: var(--button-hover-light);
+  transform: scale(1.05);
+}
+
+body.dark-mode .newsletter button:hover {
+  background: var(--button-hover-dark);
+}
+
+/* Message */
+#newsletter-message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: green;
+  transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode #newsletter-message {
+  color: lightgreen;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .newsletter {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .newsletter input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .newsletter button {
+    width: 100%;
+  }
+}

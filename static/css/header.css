@@ -1,0 +1,239 @@
+/* Root Variables */
+:root {
+  /* Light Mode */
+  --bg-color: #f5f5f5;
+  --text-color: #121212;
+  --header-bg: #333;
+  --nav-link-color: white;
+  --nav-hover-color: #f4a261;
+  --button-bg: #f4a261;
+  --button-hover-bg: #e76f51;
+  --border-color: #f4a261;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --header-bg: #222;
+  --nav-link-color: #f4a261;
+  --nav-hover-color: #ff9f1c;
+  --button-bg: #f4a261;
+  --button-hover-bg: #ff9f1c;
+  --border-color: #ff9f1c;
+}
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding-top: 70px;
+  /* Adjust based on header height */
+}
+
+/* Header Styling */
+.main-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0px;
+  background: var(--header-bg);
+  color: var(--nav-link-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--nav-hover-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.logo a:hover {
+  color: var(--button-hover-bg);
+}
+
+/* Navigation Menu */
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--nav-hover-color);
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+}
+
+.search-bar input {
+  border: none;
+  padding: 8px;
+  outline: none;
+  width: 150px;
+}
+
+.search-bar button {
+  background: var(--button-bg);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.search-bar button:hover {
+  background: var(--button-hover-bg);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  cursor: pointer;
+  font-size: 18px;
+  background: none;
+  border: none;
+  color: var(--nav-link-color);
+  margin-left: auto;
+  padding: 10px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  background: var(--header-bg);
+  color: var(--nav-link-color);
+  font-size: 16px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.toggle-btn:hover {
+  background: var(--nav-hover-color);
+}
+
+/* Language Selector */
+.language-selector {
+  background: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Sign-In Button */
+.sign-in-btn {
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+.sign-in-btn:hover {
+  background: var(--button-hover-bg);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: var(--nav-link-color);
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: var(--header-bg);
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-menu a {
+    padding: 10px;
+    display: block;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .search-bar {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .sign-in-btn {
+    margin-top: 10px;
+  }
+}

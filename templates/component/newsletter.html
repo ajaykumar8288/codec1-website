@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/newsletter.css') }}">
+</head>
+
+<body>
+  <!-- Newsletter Subscription -->
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter 📩</h2>
+    <p>Stay updated with the latest coding tips and tutorials!</p>
+    <form id="newsletter-form">
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="newsletter-message"></p>
+  </section>
+
+  <!-- Verification Code Input -->
+  <!-- <section class="verification" style="display: none;">
+  <h2>Verify Your Email</h2>
+  <form id="verification-form">
+      <input type="email" id="verify-email" name="email" placeholder="Enter your email" required>
+      <input type="text" id="verification-code" name="code" placeholder="Enter verification code" required>
+      <button type="submit">Verify</button>
+  </form>
+  <p id="verification-message"></p>
+</section> -->
+
+  <!-- Unsubscribe
+<section class="unsubscribe">
+  <h2>Unsubscribe</h2>
+  <form id="unsubscribe-form">
+      <input type="email" id="unsubscribe-email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Unsubscribe</button>
+  </form>
+  <p id="unsubscribe-message"></p>
+</section> -->
+
+  <!-- JavaScript Files -->
+  <script defer src="{{ url_for('static', filename='js/newsletter.js') }}"></script>
+
+</body>
+
+</html>
